@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  java-maven:
+    image: maven:3.8.8-eclipse-temurin-21
+    container_name: java_maven
+    ports:
+      - 8090:8080
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: tail -f /dev/null

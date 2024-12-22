@@ -1,0 +1,55 @@
+# Logs
+logs/
+*.log
+*.log.*
+
+# Compiled class files
+target/
+bin/
+
+# Maven specific files
+.mvn/
+.settings/
+!mvn/wrapper/maven-wrapper.jar
+
+# Eclipse specific files
+.classpath
+.project
+*.swp
+.springBeans
+
+# IntelliJ IDEA specific files
+.idea/
+*.iml
+*.iws
+out/
+
+# VS Code specific files
+.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+*.~lock.*
+ehthumbs.db
+Icon?
+
+# Test result files
+surefire-reports/
+test-output/
+
+# Environment variable files
+.env
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*.swo
+*.~undo-tree~
+
+# IDE Cache
+*.class
+*.war
+*.ear
+*.jar
