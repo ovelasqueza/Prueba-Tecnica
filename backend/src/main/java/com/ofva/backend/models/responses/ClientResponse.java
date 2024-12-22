@@ -1,6 +1,6 @@
 package com.ofva.backend.models.responses;
 
-public class UserResponse {
+public class ClientResponse {
     private String firstName;
     private String lastName;
     private String secondName;
@@ -9,7 +9,7 @@ public class UserResponse {
     private String address;
     private String city;
 
-    public UserResponse(String firstName,String secondName, String lastName, String secondLastName, String phoneNumber, String address, String city) {
+    public ClientResponse(String firstName, String secondName, String lastName, String secondLastName, String phoneNumber, String address, String city) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.lastName = lastName;
