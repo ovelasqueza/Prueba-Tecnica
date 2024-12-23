@@ -12,15 +12,27 @@ import { Client } from '../../../models/client';
 })
 export class ClientDetailComponent {
   client: Client = {
-    name: 'Fernando',
-    lastName: 'Velasquez',
+    name: '',
+    lastName: '',
   };
 
   constructor(private clientService: ClientService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
-      this.client = this.clientService.getClient(params['documentType'], params['documentNumber']);
+      if (params['remote']=='true') {
+        this.clientService.getClientRemoteApi(params['documentType'], params['documentNumber']).subscribe((clientResponse) => {
+          const clientDTO = clientResponse.data;
+          this.client = {
+            name: clientDTO.firstName,
+            lastName: clientDTO.lastName
+          };
+          console.log("respuesta remota", clientResponse);
+        });
+
+      } else {
+        this.client = this.clientService.getClient(params['documentType'], params['documentNumber']);
+      }
     });
 
 

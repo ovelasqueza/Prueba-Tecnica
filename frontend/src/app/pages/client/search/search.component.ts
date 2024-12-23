@@ -14,6 +14,7 @@ export class ClientSearchComponent {
   name = 'Client Search';
   documentType: string = '';
   documentNumber: string = '';
+  remoteSearch: boolean = true;
 
   constructor(private router: Router) {
   }
@@ -29,11 +30,11 @@ export class ClientSearchComponent {
   }
 
   search() {
-      console.log('this.documentType', this.documentType);
     this.router.navigate(['client/detail'], {
       queryParams: {
         documentType: this.documentType,
-        documentNumber: this.documentNumber
+        documentNumber: this.documentNumber,
+        remote: this.remoteSearch
       }
     });
   }

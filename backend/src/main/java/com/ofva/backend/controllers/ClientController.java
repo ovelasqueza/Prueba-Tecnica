@@ -1,17 +1,23 @@
 package com.ofva.backend.controllers;
 
-import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.ofva.backend.exceptions.CustomException;
 import com.ofva.backend.models.requests.ClientGetRequest;
 import com.ofva.backend.models.responses.ClientResponse;
 import com.ofva.backend.models.responses.Response;
 import com.ofva.backend.services.ClientService;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.*;
+
+import jakarta.validation.Valid;
 
 @RestController
+@CrossOrigin(origins = "*")
 @Validated
 @RequestMapping("/clients")
 public class ClientController {
