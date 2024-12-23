@@ -1,7 +1,7 @@
 <main class="main">
     <div class="container">
         <form class="search-form p-4 shadow-sm rounded col-sm-10 col-md-8 col-lg-6 mx-auto form-control-lg">
-            
+
             <small class="search-form-title d-block mb-2 text-muted">
                 Todos los campos son obligatorios
             </small>
@@ -23,12 +23,20 @@
                     (input)="formatNumber($event)">
             </div>
 
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="remoteSearch" [checked]="remoteSearch" name="remoteSearch">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Búsqueda remota REST
+                </label>
+            </div>
+
             <div class="d-flex justify-content-center">
-                <button (click)="search()" class="search-form-button btn rounded-pill px-5 py-2" [disabled]="isButtonDisabled">
+                <button (click)="search()" class="search-form-button btn rounded-pill px-5 py-2"
+                    [disabled]="isButtonDisabled">
                     Buscar
                 </button>
             </div>
-            
+
         </form>
     </div>
 </main>
