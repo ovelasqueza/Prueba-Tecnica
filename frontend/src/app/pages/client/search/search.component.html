@@ -1,0 +1,36 @@
+<main class="main">
+    <div class="container">
+        <form class="search-form p-4 shadow-sm rounded col-sm-10 col-md-8 col-lg-6 mx-auto form-control-lg">
+            
+            <small class="search-form-title d-block mb-2 text-muted">
+                Todos los campos son obligatorios
+            </small>
+
+            <div class="form-group mb-3">
+                <label for="documentType">Tipo de documento</label>
+                <select id="documentType" [(ngModel)]="documentType" name="documentType"
+                    class="form-control form-control-lg">
+                    <option value="" disabled selected>Seleccione un tipo de documento</option>
+                    <option value="C">Cédula de ciudadanía</option>
+                    <option value="P">Pasaporte</option>
+                </select>
+            </div>
+
+            <div class="form-group mb-3">
+                <label for="documentNumber">Número de documento</label>
+                <input type="text" id="documentNumber" [(ngModel)]="documentNumber" name="documentNumber"
+                    class="form-control form-control-lg" minlength="8" maxlength="11" pattern="\d*"
+                    (input)="formatNumber($event)">
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <button (click)="search()" class="search-form-button btn rounded-pill px-5 py-2" [disabled]="isButtonDisabled">
+                    Buscar
+                </button>
+            </div>
+            
+        </form>
+    </div>
+</main>
+
+<router-outlet></router-outlet>

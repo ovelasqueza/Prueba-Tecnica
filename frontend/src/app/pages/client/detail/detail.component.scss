@@ -1,0 +1,33 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; // Centrado vertical completo
+    background-color: #f9f9f9; // Fondo similar al ejemplo
+  }
+  
+  .content {
+    max-width: 600px;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .form-label {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  
+  input.form-control-lg {
+    background-color: #f1f1f1;
+    border: none;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border-radius: 25px;
+  }
+  

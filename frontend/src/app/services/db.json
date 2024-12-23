@@ -1,0 +1,35 @@
+[
+    {
+        "firstName": "Juan",
+        "lastName": "sanchez",
+        "secondName": "Carlos",
+        "secondLastName": "Gómez",
+        "phoneNumber": "123456789",
+        "address": "Calle  123",
+        "city": "Ciudad Bogota",
+        "documentType": "C",
+        "documentNumber": "12345678"
+    },
+    {
+        "firstName": "María",
+        "lastName": "López",
+        "secondName": "Ana",
+        "secondLastName": "Martínez",
+        "phoneNumber": "987654321",
+        "address": "avenida 742",
+        "city": "Cali",
+        "documentType": "P",
+        "documentNumber": "87654321"
+    },
+    {
+        "firstName": "Jhenny",
+        "lastName": "Pérez",
+        "secondName": "Ana",
+        "secondLastName": "Meza",
+        "phoneNumber": "987654321",
+        "address": "calle 5",
+        "city": "Pasto",
+        "documentType": "C",
+        "documentNumber": "1039454860"
+    }
+]
